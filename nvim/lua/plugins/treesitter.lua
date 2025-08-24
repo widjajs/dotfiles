@@ -1,11 +1,24 @@
 return {
+    -- Modify Treesitter
     {
         "nvim-treesitter/nvim-treesitter",
-        opts = {
-            ensure_installed = { "html" }, -- Add "html" to the list of parsers
-            highlight = {
-                enable = true, -- Enable syntax highlighting
-            },
+        dependencies = {
+            -- Add nvim-ts-autotag
+            { "windwp/nvim-ts-autotag" },
         },
+        event = { "BufReadPre" },
+        opts = function(_, opts)
+            vim.list_extend(opts.ensure_installed, {
+                "c",
+                "cpp",
+                "fish",
+                "rust",
+            })
+            return vim.tbl_deep_extend("force", opts, {
+                autotag = {
+                    enable = true,
+                },
+            })
+        end,
     },
 }

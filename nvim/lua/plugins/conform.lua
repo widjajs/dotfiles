@@ -21,7 +21,7 @@ return {
             -- Customize formatter options
             formatters = {
                 prettier = {
-                    prepend_args = { "--single-quote", "--print-width=80" }, -- Prettier options
+                    prepend_args = { "--tab-width=4", "--single-quote", "--print-width=80" }, -- Prettier options
                 },
                 stylua = {
                     prepend_args = { "--indent-width", "4" }, -- StyLua options
