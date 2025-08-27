@@ -1,4 +1,16 @@
 return {
+    "saghen/blink.cmp",
+    opts = {
+        keymap = { preset = "default" },
+
+        sources = {
+            default = { "lsp", "path", "snippets", "buffer" },
+        },
+    },
+    opts_extend = { "sources.default" },
+}
+--[[
+return {
     "saghen/blink.nvim",
     build = "cargo build --release", -- for delimiters
     keys = {
@@ -32,3 +44,5 @@ return {
         tree = { enabled = true },
     },
 }
+
+--]]
