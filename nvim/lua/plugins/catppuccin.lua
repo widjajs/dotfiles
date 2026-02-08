@@ -5,7 +5,7 @@ return {
         lazy = false,
         priority = 1000,
         opts = {
-            flavour = "auto", -- or "latte", "frappe", "macchiato", "mocha"
+            flavour = "auto",
             background = {
                 light = "latte",
                 dark = "macchiato",
@@ -18,7 +18,6 @@ return {
                 telescope = true,
                 mason = true,
                 bufferline = true,
-                -- add others you use
             },
         },
         config = function(_, opts)
