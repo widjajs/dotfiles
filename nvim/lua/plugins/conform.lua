@@ -28,7 +28,16 @@ return {
                 },
                 clang_format = {
                     prepend_args = {
-                        "--style={BasedOnStyle: LLVM, ColumnLimit: 100, IndentWidth: 4, AllowShortFunctionsOnASingleLine: None, AccessModifierOffset: -4, IndentCaseLabels: true, IndentCaseBlocks: false }",
+                        "--style={"
+                            .. "BasedOnStyle: LLVM, "
+                            .. "ColumnLimit: 100, "
+                            .. "IndentWidth: 4, "
+                            .. "AllowShortFunctionsOnASingleLine: None, "
+                            .. "AccessModifierOffset: -4, "
+                            .. "IndentCaseLabels: true, "
+                            .. "IndentCaseBlocks: false, "
+                            .. "AllowShortIfStatementsOnASingleLine: WithoutElse"
+                            .. "}",
                     },
                 },
             },
