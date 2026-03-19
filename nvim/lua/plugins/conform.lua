@@ -30,7 +30,7 @@ return {
                     prepend_args = {
                         "--style={"
                             .. "BasedOnStyle: LLVM, "
-                            .. "ColumnLimit: 100, "
+                            .. "ColumnLimit: 90, "
                             .. "IndentWidth: 4, "
                             .. "AllowShortFunctionsOnASingleLine: None, "
                             .. "AccessModifierOffset: -4, "
